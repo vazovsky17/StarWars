@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Common -->
+    <string name="loading_dialog_text">Please wait…</string>
+
+    <string name="error_retry">Retry</string>
+    <string name="error_internet_message">Failed to get data, please try again later</string>
+    <string name="error_button_label">Update</string>
+    <string name="error_paging">Error. Try to update</string>
+
+    <!-- Network -->
+    <string name="error_no_network_title">No network connection</string>
+    <string name="error_no_network_description">Check your mobile or Wi-Fi connection</string>
+
+    <!-- Something wrong -->
+    <string name="error_something_wrong_title">Something wrong</string>
+    <string name="error_something_wrong_description">Try to update</string>
+
+    <!-- Empty View -->
+    <string name="empty_default_title">There is nothing here yet</string>
+    <string name="empty_default_message">But it will definitely show up soon</string>
+</resources>
