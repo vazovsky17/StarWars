@@ -13,28 +13,28 @@ interface StarWarsApiService {
 
     @GET("people")
     suspend fun getCharacters(
-        @Query("page") page: Long?,
+        @Query("page") page: Int?,
         @Query("search") search: String?,
     ): CharacterListResponse
 
     @GET("people/{id}")
     suspend fun getCharacterById(
-        @Path("id") id: Long
+        @Path("id") id: Int
     ): CharacterResponse
 
     @GET("starships")
     suspend fun getStarships(
-        @Query("page") page: Long?,
+        @Query("page") page: Int?,
         @Query("search") search: String?,
     ): StarshipListResponse
 
     @GET("starships/{id}")
     suspend fun getStarshipById(
-        @Path("id") id: Long
+        @Path("id") id: Int
     ): StarshipResponse
 
     @GET("films/{id}")
     suspend fun getFilmById(
-        @Path("id") id: Long,
+        @Path("id") id: Int,
     ): FilmResponse
 }

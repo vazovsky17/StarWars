@@ -10,23 +10,23 @@ class SemimockStarWarsApiService(
     private val apiService: StarWarsApiService,
     private val mockApiService: MockStarWarsApiService,
 ) : StarWarsApiService {
-    override suspend fun getCharacters(page: Long?, search: String?): CharacterListResponse {
+    override suspend fun getCharacters(page: Int?, search: String?): CharacterListResponse {
         return mockApiService.getCharacters(page, search)
     }
 
-    override suspend fun getCharacterById(id: Long): CharacterResponse {
+    override suspend fun getCharacterById(id: Int): CharacterResponse {
         return mockApiService.getCharacterById(id)
     }
 
-    override suspend fun getStarships(page: Long?, search: String?): StarshipListResponse {
+    override suspend fun getStarships(page: Int?, search: String?): StarshipListResponse {
         return mockApiService.getStarships(page, search)
     }
 
-    override suspend fun getStarshipById(id: Long): StarshipResponse {
+    override suspend fun getStarshipById(id: Int): StarshipResponse {
         return mockApiService.getStarshipById(id)
     }
 
-    override suspend fun getFilmById(id: Long): FilmResponse {
+    override suspend fun getFilmById(id: Int): FilmResponse {
         return mockApiService.getFilmById(id)
     }
 }

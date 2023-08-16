@@ -107,7 +107,7 @@ class MockStarWarsApiService : StarWarsApiService {
         )
     )
 
-    override suspend fun getCharacters(page: Long?, search: String?): CharacterListResponse {
+    override suspend fun getCharacters(page: Int?, search: String?): CharacterListResponse {
         return CharacterListResponse(
             count = 82,
             next = "https://swapi.dev/api/people/?page=2",
@@ -116,11 +116,11 @@ class MockStarWarsApiService : StarWarsApiService {
         )
     }
 
-    override suspend fun getCharacterById(id: Long): CharacterResponse {
-        return characters[id.toInt()]
+    override suspend fun getCharacterById(id: Int): CharacterResponse {
+        return characters[id]
     }
 
-    override suspend fun getStarships(page: Long?, search: String?): StarshipListResponse {
+    override suspend fun getStarships(page: Int?, search: String?): StarshipListResponse {
         return StarshipListResponse(
             count = 36,
             next = "https://swapi.dev/api/starships/?page=2",
@@ -129,11 +129,11 @@ class MockStarWarsApiService : StarWarsApiService {
         )
     }
 
-    override suspend fun getStarshipById(id: Long): StarshipResponse {
-        return starships[id.toInt()]
+    override suspend fun getStarshipById(id: Int): StarshipResponse {
+        return starships[id]
     }
 
-    override suspend fun getFilmById(id: Long): FilmResponse {
+    override suspend fun getFilmById(id: Int): FilmResponse {
         return FilmResponse(
             title = "A New Hope",
             episodeId = 4,

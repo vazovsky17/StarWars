@@ -7,7 +7,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 class FilmResponse(
     @SerializedName("title") val title: String?,
-    @SerializedName("episode_id") val episodeId: Long?,
+    @SerializedName("episode_id") val episodeId: Int?,
     @SerializedName("opening_crawl") val openingCrawl: String?,
     @SerializedName("director") val director: String?,
     @SerializedName("producer") val producer: String?,
